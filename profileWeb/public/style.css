@@ -1,0 +1,58 @@
+#box-jam{
+    height: 25px;
+    background-color:#343f52;
+    color: white;
+}
+
+#jam{
+    margin-top: 10px;
+}
+
+.navbar{
+    height: 100px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#footer-info{
+    color: white;
+    background-color: #343f52;
+    padding: 10px 10px 10px 10px;
+    /*position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;*/
+}
+
+#copyright{
+    background-color: #262b32;
+    color: white;
+}
+
+.sosmed-icon:hover{
+    color: #1bbd36;
+}
+
+.bi-whatsapp, .bi-instagram, .bi-facebook, .bi-twitter, .bi-youtube{
+    font-size: 32px;
+}
+
+.img-apps-footer{
+    width: 30%;
+    margin-top: 5px;
+}
+
+#img-sejarah{
+    width: 60%;
+}
+
+#card-layanan:hover{
+    background-color: #343f52;
+    color: white;
+}
+
+#gbr-maklumat, #gbr-alur-pelayanan{
+    width: 50%;
+}
