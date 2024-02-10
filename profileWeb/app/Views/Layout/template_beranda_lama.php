@@ -15,31 +15,6 @@
 
     <!-- bootstrap js-->
     
-
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-
-    <!-- CONTUM CSS -->
-    <style>
-
-@keyframes fade { 
-  from { opacity: 0; } 
-}
-
-.blinking {
-  animation: fade 2s infinite alternate;
-}
-
-p {
-    text-align: justify;
-}
-
-    </style>
-
     <title>Geofisika Denpasar</title>
     <link rel="icon" type="image/x-icon" href="<?= base_url('gambar/logo bmkg.png') ?>">
 </head>
@@ -50,9 +25,9 @@ p {
         </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo base_url('/beranda') ?>"><img src="<?php echo base_url('gambar/STASIUN_GEOFISIKA_DENPASAR.png') ?>" alt="logo"></a>
+                <a class="navbar-brand" href="<?php echo base_url('web/beranda') ?>"><img src="<?php echo base_url('gambar/STASIUN_GEOFISIKA_DENPASAR.png') ?>" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -61,10 +36,10 @@ p {
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Profil</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo base_url('/sejarah') ?>">Sejarah</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('/visiMisi') ?>">Visi & Misi</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('/tugas') ?>">Tugas & Fungsi</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('/struktur') ?>">Struktur Organisasi</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('web/sejarah') ?>">Sejarah</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('web/visi') ?>">Visi & Misi</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('web/tugas') ?>">Tugas & Fungsi</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('web/struktur') ?>">Struktur Organisasi</a></li>
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -77,13 +52,9 @@ p {
                         <li><a class="dropdown-item" href="https://eskm.bmkg.go.id/survey/437344/0/2/2023-11/2023/0">E-SKM BMKG</a></li>
                     </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Informasi Gempabumi Wilayah Bali</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo base_url('/infogempaterkini') ?>">Gempa Bumi Terkini</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('/visiMisi') ?>">Gempa Bumi Dirasakan</a></li>
-                        <!-- <li><a class="dropdown-item" href="">Gempa Bumi M > 5 SR</a></li> -->
-                    </ul>
+                    <li class="nav-item">
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://inatews.bmkg.go.id/">Informasi Gempabumi & Tsunami</a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Publikasi</a>
@@ -96,74 +67,6 @@ p {
                 </div>
             </div>
         </nav>
-        
-<div class="container mb-3">
-    <div class="row content mt-2">
-        <div class="col-lg-8">
-        <?= $this->renderSection('content') ?>
-        </div>
-        <div class="col-lg-4">
-            <div class="container">
-            <?php
-                    $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
-                    $shakemap = $data->gempa->Shakemap;
-                    ?>
-                <div class="card">
-                    <div class="card-header" style="background-color:#343f52; color: white;"><h5>ShakeMap Gempa Dirasakan</h5></div>
-                    <div class="card-body">
-                        <div class="col-lg-12 gempa-map"><img src="https://data.bmkg.go.id/DataMKG/TEWS/<?=$shakemap?>" width="100%" alt="informasi gempa bumi region 3"></div>
-                    </div>      
-                </div>
-            </div>
-            <div class="container mt-2">
-                <div class="card">
-                    <div class="card-header" style="background-color:#343f52; color: white;" >
-                        <h5>Press Release / Artikel</h5>
-                    </div>
-                    <div class="content-body">
-                        <div class="card mb-2">
-                            <div class="card-body">
-                                <h5 class="card-title">Simulasi Kesiapsiagaan Gempabumi dan Tsunami ITDC</h5>
-                                <p class="card-text">Berdasarkan Undang-Undang Nomor 24 Tahun 2007 tentang Penanggulangan Bencana, maka tanggal 26 April 2023 ditetapkan sebagai Hari Kesiapsiagaan Bencana Nasional (HKBN). .....</p>
-                                <a href="<?php echo base_url('artikel/20230427') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
-                            </div>
-                        </div>
-                        <div class="card mb-2">
-                            <div class="card-body">
-                                <h5 class="card-title">Rangkaian BMKG Goes to School Kabupaten Buleleng </h5>
-                                <p class="card-text">Sebagai tidak lanjut kegiatan Sekolah Lapang Gempabumi yang diadakan di Kabupaten Buleleng wilayah Desa Pengastulan, Stasiun Geofisika Denpasar melakukan kegiatan BMKG Goes To School....</p>
-                                <a href="<?php echo base_url('artikel/20230905') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Pelatihan Penanggulangan Bencana Alam Di Wilayah Kerja Lanal Denpasar 2023</h5>
-                                <p class="card-text">Berdasarkan rapat pimpinan TNI-Polri tahun 2023 yang dilaksanakan pada hari Rabu, 8 Februari 2023. Presiden RI Joko Widodo menyebutkan bahwa pemerintah telah menetapkan tujuh prioritas nasional ....</p>
-                                <a href="<?php echo base_url('artikel/20230208') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container mt-2">
-            <?php
-                    $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
-                    $shakemap = $data->gempa->Shakemap;
-                    ?>
-                <div class="card">
-                    <div class="card-header" style="background-color:#343f52; color: white;"><h5>Indeks Kepuasan Masyarakat</h5></div>
-                    <div class="card-body">
-                        <div class="col-lg-12"><img src="<?php echo base_url('gambar/ikmDNP.png') ?>" alt="" width="100%"></div>
-                    </div>      
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
 
         <p><?= $this->renderSection('content') ?></p>
 
@@ -209,9 +112,7 @@ p {
         </div>
         <footer class="container-fluid" id="copyright"><p>2023 | Stasiun Geofisika Denpasar</p></footer>
     
-    <script>
-    var map = L.map('map').setView([51.505, -0.09], 13);
-    </script>
+
     <!-- Jquery dan Bootsrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -227,7 +128,6 @@ p {
             display_jam();
         }
     </script>
-
 
 </body>
 </html>

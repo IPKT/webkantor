@@ -1,10 +1,10 @@
-<?= $this->extend('Layout/template') ?>
+<?= $this->extend('Layout/template_beranda') ?>
  
 <?= $this->section('content') ?>
 <div class="card">
     <div class="card-header" style="background-color:#343f52; color: white;">
         <div>
-                <h5>Gempa Bumi Dirasakan (15 Data terakhir) </h5>
+                <h5>Gempa Bumi Terkini </h5>
         </div>
     </div>
     <div class="card-body">
@@ -16,7 +16,7 @@
 
     
         <div class="table-responsive">
-        <table class="table table-hover table-striped">
+        <table hidden class="table table-hover table-striped">
         <thead>
             <tr class="text-center">
                 <th>No</th>
@@ -29,7 +29,7 @@
         </thead>
         <tbody>
         <?php 
-        $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.xml") or die ("Gagal ambil!");
+        $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.xml") or die ("Gagal ambil!");
         $no = 1;
         foreach ($data->gempa as $gempaM5):
         if ($no > 5) {
@@ -99,69 +99,71 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid" id="container-layanan">
             <div>
-                <h5>Layanan </h5>
+                <h5 id="judul-layanan">Layanan</h5>
             </div>
             <div class="row mb-2">
-                <div class="col-4">
-                    <div class="card">
-                    <img src="<?php echo base_url('gambar/layanan1.png') ?>" width="60%" class="mx-auto mt-3">
+                <div class="col-xs-12 col-md-4 pt-2 pb-2">
+                    <div class="card card-glow">
+                    <img src="<?php echo base_url('gambar/2.png') ?>" width="70%" class="mx-auto mt-3">
                     <div class="card-body">
-                        <h5>GEMPA</h5>
-                        <p class="card-text">Memberikan layanan informasi Gempa</p>
+                        <h5>Informasi Geofisika</h5>
+                        <p class="card-text">Menyediakan informasi kejadian Gempa Bumi, Potensi Tsunami, dan kejadian petir</p>
                     </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="card">
-                    <img src="<?php echo base_url('gambar/layanan1.png') ?>" width="60%" class="mx-auto mt-3">
+                <div class="col-xs-12 col-md-4 pt-2 pb-2">
+                    <div class="card card-glow">
+                    <img src="<?php echo base_url('gambar/1.png') ?>" width="70%" class="mx-auto mt-3">
                     <div class="card-body">
-                        <h5>GEMPA</h5>
-                        <p class="card-text">Memberikan layanan informasi Gempa</p>
+                        <h5>Permintaan Data</h5>
+                        <p class="card-text">Melayani permintaan data cuaca kota Denpasar, data petir, dan kejadian gempa yang lalu.</p>
                     </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="card">
-                    <img src="<?php echo base_url('gambar/layanan1.png') ?>" width="60%" class="mx-auto mt-3">
+                <div class="col-xs-12 col-md-4 pt-2 pb-2">
+                    <div class="card card-glow">
+                    <img src="<?php echo base_url('gambar/6.png') ?>" width="70%" class="mx-auto mt-3">
                     <div class="card-body">
-                        <h5>GEMPA</h5>
-                        <p class="card-text">Memberikan layanan informasi Gempa</p>
+                        <h5>Informasi Tanda Waktu</h5>
+                        <p class="card-text">Menyediakan informasi zona waktu, terbit terbenam matahari, hilal</p>
                     </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-4">
-                    <div class="card">
-                    <img src="<?php echo base_url('gambar/layanan1.png') ?>" width="60%" class="mx-auto mt-3">
+                <div class="col-xs-12 col-md-4">
+                    <div class="card card-glow">
+                    <img src="<?php echo base_url('gambar/4.png') ?>" width="70%" class="mx-auto mt-3">
                     <div class="card-body">
-                        <h5>GEMPA</h5>
-                        <p class="card-text">Memberikan layanan informasi Gempa</p>
+                        <h5>Praktek Kerja Lapangan</h5>
+                        <p class="card-text">Menerima mahasiswa yang ingin melaksanakan PKL sesuai jurusan terkait</p>
                     </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="card">
-                    <img src="<?php echo base_url('gambar/layanan1.png') ?>" width="60%" class="mx-auto mt-3">
+                <div class="col-xs-12 col-md-4 pt-2 pb-2">
+                    <div class="card card-glow">
+                    <img src="<?php echo base_url('gambar/5.png') ?>" width="70%" class="mx-auto mt-3">
                     <div class="card-body">
-                        <h5>GEMPA</h5>
-                        <p class="card-text">Memberikan layanan informasi Gempa</p>
+                        <h5>Narasumber</h5>
+                        <p class="card-text">Melayani permintaan sebagai narasumber pada kegiatan
+                             sesuai dengan tugas & fungsi BMKG</p>
                     </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="card">
-                    <img src="<?php echo base_url('gambar/layanan1.png') ?>" width="60%" class="mx-auto mt-3">
+                <div class="col-xs-12 col-md-4 pt-2 pb-2">
+                    <div class="card card-glow">
+                    <img src="<?php echo base_url('gambar/3.png') ?>" width="70%" class="mx-auto mt-3">
                     <div class="card-body">
-                        <h5>GEMPA</h5>
-                        <p class="card-text">Memberikan layanan informasi Gempa</p>
+                        <h5>Kunjungan Sekolah</h5>
+                        <p class="card-text">Mengenalkan mitigasi bencana gempabumi dan tsunami kepada siswa sekolah</p>
                     </div>
                     </div>
                 </div>
             </div>
 </div>
+
 
 <script>
 var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
@@ -192,7 +194,7 @@ const layerControl = L.control.layers(baseLayers).addTo(map);
 
 <!-- MENAMPILKAN SELURUH GEMPA -->
 <?php
-$data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.xml") or die ("Gagal ambil!");
+$data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.xml") or die ("Gagal ambil!");
 $koordinatTerakhir = "";
 $i = 1;
 foreach($data->gempa as $gempaM5) { 

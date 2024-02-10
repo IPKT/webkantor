@@ -82,7 +82,7 @@ p {
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?php echo base_url('/infogempaterkini') ?>">Gempa Bumi Terkini</a></li>
                         <li><a class="dropdown-item" href="<?php echo base_url('/visiMisi') ?>">Gempa Bumi Dirasakan</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('/tugas') ?>">Gempa Bumi M > 5 SR</a></li>
+                        <!-- <li><a class="dropdown-item" href="">Gempa Bumi M > 5 SR</a></li> -->
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -105,13 +105,25 @@ p {
         <div class="col-lg-4">
             <div class="container">
             <?php
-                    $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
-                    $shakemap = $data->gempa->Shakemap;
+                    // $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
+                    // $shakemap = $data->gempa->Shakemap;
+                    $shakemap = "";
+                    $db = \Config\Database::connect();
+                    $query = $db->query('SELECT id_shakemap FROM gempabali ORDER BY id DESC LIMIT 1');
+                    $results   = $query->getRow();
+                    if($results->id_shakemap ==NULL or $results->id_shakemap == "" ){
+                        $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
+                        $shakemap = $data->gempa->Shakemap;
+                    } else{
+                        $shakemap = $results->id_shakemap;
+                    }
+                    
                     ?>
                 <div class="card">
                     <div class="card-header" style="background-color:#343f52; color: white;"><h5>ShakeMap Gempa Terkini</h5></div>
                     <div class="card-body">
-                        <div class="col-lg-12 gempa-map"><img src="https://data.bmkg.go.id/DataMKG/TEWS/<?=$shakemap?>" width="100%" alt="informasi gempa bumi region 3"></div>
+                             <div class="col-lg-12 gempa-map"><img src="https://pgt.bmkg.go.id/assets/pgr3_peta/<?=$shakemap?>.png" width="100%" alt="informasi gempa bumi region 3"></div>
+                        <!-- <div class="col-lg-12 gempa-map"><img src="https://data.bmkg.go.id/DataMKG/TEWS/<?=$shakemap?>" width="100%" alt="informasi gempa bumi region 3"></div> -->
                     </div>      
                 </div>
             </div>

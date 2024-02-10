@@ -51,19 +51,23 @@ var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const map = L.map('map', {
-center: [-9.5, 115.26],
-zoom: 7,
-layers: [googleSat]
-}); 
+// const map = L.map('map', {
+// center: [-9.5, 115.26],
+// zoom: 7,
+// layers: [googleSat]
+// }); 
 
-const baseLayers = {
-'Default': googleStreets,
-'Satelite': googleSat,
-};
+// const baseLayers = {
+// 'Default': googleStreets,
+// 'Satelite': googleSat,
+// };
 
-const layerControl = L.control.layers(baseLayers).addTo(map);
+
+const diatas5 = L.layerGroup();
+const dibawah5 = L.layerGroup();
+// const layerControl = L.control.layers(baseLayers).addTo(map);
 </script>
+
 
 
 <!-- MENAMPILKAN SELURUH GEMPA -->
@@ -71,8 +75,9 @@ const layerControl = L.control.layers(baseLayers).addTo(map);
 $koordinatTerakhir = "";
 $lintangTerakhir = "";
 $bujurTerakhir = "";
+$infoGempaTerakhir = "";
 $db = \Config\Database::connect();
-$query = $db->query('SELECT infogempa FROM gempabali ORDER BY id DESC LIMIT 20');
+$query = $db->query('SELECT infogempa FROM gempabali ORDER BY id DESC LIMIT 100');
 $results   = $query->getResultArray();
 $no = 1;
 $warna = "";
@@ -81,6 +86,7 @@ foreach ($results as $row):
     if ($no==1) {
         $lintangTerakhir = $lintang;
         $bujurTerakhir = $bujur;
+        $infoGempaTerakhir = $row['infogempa'];
     }
     if ($kedalaman<50) {
         $warna = 'red';
@@ -97,29 +103,64 @@ foreach ($results as $row):
     } else {
         $radius = 3000;
     }
-
-
-    ?>
-    <script>
+    if (floatval($magnitude)<5):?>
+        <script>
     var circleMarker2 = L.circle([<?=$lintang?>,<?=$bujur?> ], {
     color: '<?=$warna?>',
     fillColor: '<?=$warna?>',
     fillOpacity: 1,
     radius: <?=$radius?>,
-    }).addTo(map);
+    }).addTo(dibawah5);
     </script>
+    <?php else:?>
+        <script>
+    var circleMarker2 = L.circle([<?=$lintang?>,<?=$bujur?> ], {
+    color: '<?=$warna?>',
+    fillColor: '<?=$warna?>',
+    fillOpacity: 1,
+    radius: <?=$radius?>,
+    }).bindPopup("<?=$row['infogempa']?>").addTo(diatas5);
+    </script>
+    <?php endif;
+    ?>
+    
 
 <?php $no++; endforeach;?>
+
+<script>
+
+
+const map = L.map('map', {
+    center: [-9.5, 115.26],
+    zoom: 7,
+    layers: [googleSat, dibawah5 , diatas5],
+
+});
+
+const baseLayers = {
+'Default': googleStreets,
+'Satelite': googleSat,
+};
+
+const overlays = {
+    'Diatas 5': diatas5,
+    'Dibwah 5': dibawah5,
+};
+
+const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
+
+</script>
 
 
 <!-- MEMBERIKAN ANIMASI PADA GEMPA TERBARU -->
 <script>
+
 var circleMarker = L.circle([<?=$lintangTerakhir?>,<?=$bujurTerakhir?>], {
 color: 'red',
 fillColor: '#f03',
 fillOpacity: 0,
 radius: 3000,
-}).addTo(map);
+}).bindPopup("<?=$infoGempaTerakhir?>").addTo(dibawah5);
 
 // Variabel untuk menyimpan interval animasi
 var animationInterval;

@@ -1,3 +1,8 @@
+body{
+    position: relative;
+    min-height: 100vh;
+}
+
 #box-jam{
     height: 25px;
     background-color:#343f52;
@@ -8,8 +13,9 @@
     margin-top: 10px;
 }
 
-.navbar{
+.nav{
     height: 100px;
+    z-index: 100;
 }
 
 html{
@@ -20,15 +26,42 @@ html{
     color: white;
     background-color: #343f52;
     padding: 10px 10px 10px 10px;
-    /*position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;*/
+    min-height: 350px;
 }
 
 #copyright{
     background-color: #262b32;
     color: white;
+    bottom: 0;
+    position: absolute;
+}
+
+#container-layanan{
+    margin-top: 10px;
+}
+
+#judul-layanan{
+    padding-bottom: 15px;
+    border-bottom-style: solid;
+    border-bottom-width: 3.1px;
+    width: fit-content;
+    border-color: #198754;
+}
+
+.card-glow:hover{
+    box-shadow: 0 0 10px 5px #F0F0F0;
+}
+
+footer > p{
+    text-align: center;
+}
+
+a{
+    color: white;
+}
+
+.sosmed-icon{
+    padding: 0px 5px 5px 0px;
 }
 
 .sosmed-icon:hover{
@@ -40,7 +73,7 @@ html{
 }
 
 .img-apps-footer{
-    width: 30%;
+    width: 100%;
     margin-top: 5px;
 }
 
@@ -48,11 +81,9 @@ html{
     width: 60%;
 }
 
-#card-layanan:hover{
-    background-color: #343f52;
-    color: white;
-}
-
 #gbr-maklumat, #gbr-alur-pelayanan{
     width: 50%;
 }
+
+
+@media only screen and ( max-width: 768px) {}

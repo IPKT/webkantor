@@ -22,3 +22,5 @@ $routes->get('/kegiatan/(:segment)', 'Web::kegiatan/$1');
 $routes->get('/infogempaterkini', 'Web::infogempaterkini');
 
 $routes->post('/simpan', 'Web::simpan');
+
+$routes->post('/simpan_gempapgr3', 'Web::simpan2');
