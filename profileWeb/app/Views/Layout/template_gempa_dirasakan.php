@@ -110,20 +110,20 @@ p {
                     $srcShakemap="";
                     $shakemap = "";
                     $db = \Config\Database::connect();
-                    $query = $db->query('SELECT id_shakemap FROM gempabali ORDER BY id DESC LIMIT 1');
+                    $query = $db->query('SELECT id FROM gempabalidirasakan ORDER BY id DESC LIMIT 1');
                     $results   = $query->getRow();
-                    if($results->id_shakemap ==NULL or $results->id_shakemap == "" ){
+                    if($results->id ==NULL or $results->id == "" ){
                         $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
                         $shakemap = $data->gempa->Shakemap;
                         $srcShakemap="https://data.bmkg.go.id/DataMKG/TEWS/".$shakemap;
                     } else{
-                        $shakemap = $results->id_shakemap;
-                        $srcShakemap = "https://pgt.bmkg.go.id/assets/pgr3_peta/".$shakemap.".png";
+                        $shakemap = $results->id;
+                        $srcShakemap="https://data.bmkg.go.id/DataMKG/TEWS/".$shakemap.".mmi.jpg";
                     }
                     
                     ?>
                 <div class="card">
-                    <div class="card-header" style="background-color:#343f52; color: white;"><h5>Peta Gempa Terkini</h5></div>
+                    <div class="card-header" style="background-color:#343f52; color: white;"><h5>ShakeMap Gempa Dirasakan</h5></div>
                     <div class="card-body">
                              <div class="col-lg-12 gempa-map"><img src="<?=$srcShakemap?>" width="100%" alt="informasi gempa bumi region 3"></div>
                     </div>      

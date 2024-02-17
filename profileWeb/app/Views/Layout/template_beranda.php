@@ -81,7 +81,7 @@ p {
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Informasi Gempabumi Wilayah Bali</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?php echo base_url('/infogempaterkini') ?>">Gempa Bumi Terkini</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('/visiMisi') ?>">Gempa Bumi Dirasakan</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('/infogempadirasakan') ?>">Gempa Bumi Dirasakan</a></li>
                         <!-- <li><a class="dropdown-item" href="">Gempa Bumi M > 5 SR</a></li> -->
                     </ul>
                     </li>

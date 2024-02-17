@@ -1,16 +1,4 @@
-CRITICAL - 2024-02-10 03:05:42 --> Array to string conversion
-in APPPATH\Views\Layout\template.php on line 113.
- 1 APPPATH\Views\Layout\template.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\laragon\\www\\geofisikaDNP\\profileWeb\\app\\Views\\Layout\\template.php', 113, [...])
- 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\geofisikaDNP\\profileWeb\\app\\Views\\Layout\\template.php')
- 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Layout/template', [], true)
- 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('informasiGempaBumi/gempaBumiTerkini.php', [], true)
- 6 APPPATH\Controllers\Web.php(57): view('informasiGempaBumi/gempaBumiTerkini.php')
- 7 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->infogempaterkini()
- 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
- 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 03:06:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 04:06:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -21,14 +9,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 03:06:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 04:06:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210100112\',\'Info Gempa Mag:2.6 SR, 10-Feb-24 10:01:12 WIB, Lok:9.64 LS,121.87 BT (91 km Tenggara ENDE-NTT), Kedlmn:10 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214105849\',\'Info Gempa Mag:2.8 SR, 14-Feb-24 10:58:49 WIB, Lok:8.11 LS,117.62 BT (47 km TimurLaut SUMBAWA-NTB), Kedlmn:13 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 03:10:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 04:26:42 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -39,59 +27,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 03:10:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 04:26:42 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210100421\',\'Info Gempa Mag:1.9 SR, 10-Feb-24 10:04:21 WIB, Lok:8.18 LS,121.13 BT (58 km BaratLaut MBAY-NAGEKEO-NTT), Kedlmn:15 Km ::BMKG-WSI\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214111615\',\'Info Gempa Mag:2.3 SR, 14-Feb-24 11:16:15 WIB, Lok:9.72 LS,118.73 BT (31 km BaratDaya KODI-SUMBABARATDAYA-NTT), Kedlmn:35 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2024-02-10 03:17:24 --> Undefined property: stdClass::$shakemap
-in APPPATH\Views\Layout\template.php on line 124.
- 1 APPPATH\Views\Layout\template.php(124): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$shakemap', 'C:\\laragon\\www\\geofisikaDNP\\profileWeb\\app\\Views\\Layout\\template.php', 124, [...])
- 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\geofisikaDNP\\profileWeb\\app\\Views\\Layout\\template.php')
- 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Layout/template', [], true)
- 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('informasiGempaBumi/gempaBumiTerkini.php', [], true)
- 6 APPPATH\Controllers\Web.php(57): view('informasiGempaBumi/gempaBumiTerkini.php')
- 7 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->infogempaterkini()
- 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
- 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2024-02-10 03:17:59 --> Undefined property: stdClass::$shakemap
-in APPPATH\Views\Layout\template.php on line 125.
- 1 APPPATH\Views\Layout\template.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$shakemap', 'C:\\laragon\\www\\geofisikaDNP\\profileWeb\\app\\Views\\Layout\\template.php', 125, [...])
- 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\geofisikaDNP\\profileWeb\\app\\Views\\Layout\\template.php')
- 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Layout/template', [], true)
- 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('informasiGempaBumi/gempaBumiTerkini.php', [], true)
- 6 APPPATH\Controllers\Web.php(57): view('informasiGempaBumi/gempaBumiTerkini.php')
- 7 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->infogempaterkini()
- 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
- 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2024-02-10 03:18:10 --> Undefined property: stdClass::$bmkg2024cvgsWSI
-in APPPATH\Views\Layout\template.php on line 125.
- 1 APPPATH\Views\Layout\template.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$bmkg2024cvgsWSI', 'C:\\laragon\\www\\geofisikaDNP\\profileWeb\\app\\Views\\Layout\\template.php', 125, [...])
- 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\geofisikaDNP\\profileWeb\\app\\Views\\Layout\\template.php')
- 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Layout/template', [], true)
- 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('informasiGempaBumi/gempaBumiTerkini.php', [], true)
- 6 APPPATH\Controllers\Web.php(57): view('informasiGempaBumi/gempaBumiTerkini.php')
- 7 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->infogempaterkini()
- 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
- 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2024-02-10 03:49:37 --> syntax error, unexpected 'endforeach' (T_ENDFOREACH)
-in APPPATH\Views\informasiGempaBumi\gempaBumiTerkini.php on line 127.
- 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('informasiGempaBumi/gempaBumiTerkini.php', [], true)
- 3 APPPATH\Controllers\Web.php(57): view('informasiGempaBumi/gempaBumiTerkini.php')
- 4 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->infogempaterkini()
- 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
- 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 04:26:42 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 06:43:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -102,14 +45,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 04:26:42 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 06:43:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210111919\',\'Info Gempa Mag:2.0 SR, 10-Feb-24 11:19:19 WIB, Lok:8.97 LS,119.33 BT (49 km TimurLaut TAMBOLAKA-NTT), Kedlmn:119 Km ::BMKG-KHK\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214133455\',\'Info Gempa Mag:2.2 SR, 14-Feb-24 13:34:55 WIB, Lok:8.66 LS,116.17 BT (4 km TimurLaut LOMBOKBARAT-NTB), Kedlmn:93 Km ::BMKG-WSI\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 04:37:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 07:00:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -120,14 +63,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 04:37:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 07:00:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210113237\',\'Info Gempa Mag:2.4 SR, 10-Feb-24 11:32:37 WIB, Lok:8.94 LS,116.88 BT (20 km Tenggara SUMBAWABARAT-NTB), Kedlmn:10 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214135532\',\'Info Gempa Mag:2.6 SR, 14-Feb-24 13:55:32 WIB, Lok:9.81 LS,119.83 BT (13 km BaratDaya LEWA-SUMBATIMUR-NTT), Kedlmn:22 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 05:50:22 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 08:16:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -138,14 +81,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 05:50:22 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 08:16:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210113237\',\'Info Gempa Mag:2.4 SR, 10-Feb-24 11:32:37 WIB, Lok:8.94 LS,116.88 BT (20 km Tenggara SUMBAWABARAT-NTB), Kedlmn:10 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214151039\',\'Info Gempa Mag:2.4 SR, 14-Feb-24 15:10:39 WIB, Lok:8.95 LS,116.89 BT (22 km Tenggara SUMBAWABARAT-NTB), Kedlmn:10 Km ::BMKG-KHK\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 06:46:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 08:22:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -156,14 +99,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 06:46:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 08:22:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210133805\',\'Info Gempa Mag:3.0 SR, 10-Feb-24 13:38:05 WIB, Lok:8.13 LS,118.55 BT (40 km BaratLaut BIMA-NTB), Kedlmn:30 Km ::BMKG-DNP\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214151408\',\'Info Gempa Mag:1.6 SR, 14-Feb-24 15:14:08 WIB, Lok:8.46 LS,121.14 BT (30 km BaratLaut MBAY-NAGEKEO-NTT), Kedlmn:17 Km ::BMKG-DNP\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 09:31:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 08:40:42 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -174,14 +117,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 09:31:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 08:40:42 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210162553\',\'Info Gempa Mag:2.7 SR, 10-Feb-24 16:25:53 WIB, Lok:9.22 LS,115.28 BT (47 km Tenggara KUTASELATAN-BALI), Kedlmn:10 Km ::BMKG-KHK\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214153348\',\'Info Gempa Mag:2.8 SR, 14-Feb-24 15:33:48 WIB, Lok:9.68 LS,115.36 BT (99 km Tenggara KUTASELATAN-BALI), Kedlmn:23 Km ::BMKG-KHK\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 09:45:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 10:20:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -192,14 +135,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 09:45:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 10:20:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210163749\',\'Info Gempa Mag:2.6 SR, 10-Feb-24 16:37:49 WIB, Lok:8.31 LS,121.23 BT (41 km BaratLaut MBAY-NAGEKEO-NTT), Kedlmn:10 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214171455\',\'Info Gempa Mag:1.8 SR, 14-Feb-24 17:14:55 WIB, Lok:8.34 LS,116.58 BT (34 km TimurLaut LOMBOKTIMUR-NTB), Kedlmn:18 Km ::BMKG-KHK\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 10:24:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 11:26:45 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -210,14 +153,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 10:24:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 11:26:45 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210171714\',\'Info Gempa Mag:2.4 SR, 10-Feb-24 17:17:14 WIB, Lok:8.27 LS,121.12 BT (49 km BaratLaut MBAY-NAGEKEO-NTT), Kedlmn:20 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214182127\',\'Info Gempa Mag:2.3 SR, 14-Feb-24 18:21:27 WIB, Lok:8.43 LS,118.28 BT (23 km BaratLaut DOMPU-NTB), Kedlmn:11 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 10:55:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 12:13:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -228,14 +171,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 10:55:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 12:13:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210174848\',\'Info Gempa Mag:2.6 SR, 10-Feb-24 17:48:48 WIB, Lok:9.61 LS,116.91 BT (95 km Tenggara SUMBAWABARAT-NTB), Kedlmn:48 Km ::BMKG-KHK\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214190506\',\'Info Gempa Mag:2.9 SR, 14-Feb-24 19:05:06 WIB, Lok:8.50 LS,121.56 BT (34 km TimurLaut MBAY-NAGEKEO-NTT), Kedlmn:10 Km ::BMKG-KHK\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 11:53:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 13:32:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -246,14 +189,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 11:53:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 13:32:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210184305\',\'Info Gempa Mag:2.3 SR, 10-Feb-24 18:43:05 WIB, Lok:9.63 LS,121.11 BT (90 km TimurLaut WULA-WAIJELU-NTT), Kedlmn:24 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214202538\',\'Info Gempa Mag:2.6 SR, 14-Feb-24 20:25:38 WIB, Lok:7.86 LS,118.67 BT (65 km BaratLaut BIMA-NTB), Kedlmn:32 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 12:20:42 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 13:35:44 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -264,14 +207,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 12:20:42 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 13:35:44 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210191048\',\'Info Gempa Mag:2.0 SR, 10-Feb-24 19:10:48 WIB, Lok:9.30 LS,117.53 BT (90 km Tenggara SUMBAWA-NTB), Kedlmn:29 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214202918\',\'Info Gempa Mag:3.9 SR, 14-Feb-24 20:29:18 WIB, Lok:9.54 LS,117.09 BT (91 km Tenggara SUMBAWABARAT-NTB), Kedlmn:23 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 15:03:44 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 15:24:45 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -282,14 +225,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 15:03:44 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 15:24:45 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210215612\',\'Info Gempa Mag:2.5 SR, 10-Feb-24 21:56:12 WIB, Lok:8.23 LS,121.08 BT (55 km BaratLaut MBAY-NAGEKEO-NTT), Kedlmn:31 Km ::BMKG-KHK\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214221844\',\'Info Gempa Mag:2.5 SR, 14-Feb-24 22:18:44 WIB, Lok:7.42 LS,114.47 BT (61 km TimurLaut SITUBONDO-JATIM), Kedlmn:10 Km ::BMKG-KHK\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 15:44:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 15:32:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -300,14 +243,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 15:44:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 15:32:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210223938\',\'Info Gempa Mag:1.8 SR, 10-Feb-24 22:39:38 WIB, Lok:8.63 LS,121.81 BT (28 km TimurLaut ENDE-NTT), Kedlmn:10 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214222613\',\'Info Gempa Mag:1.9 SR, 14-Feb-24 22:26:13 WIB, Lok:8.28 LS,115.51 BT (7 km BaratLaut KARANGASEM-BALI), Kedlmn:14 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 15:51:45 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 15:38:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -318,14 +261,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 15:51:45 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 15:38:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210224441\',\'Info Gempa Mag:1.7 SR, 10-Feb-24 22:44:41 WIB, Lok:8.64 LS,116.28 BT (7 km TimurLaut LOMBOKTENGAH-NTB), Kedlmn:97 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214223234\',\'Info Gempa Mag:2.7 SR, 14-Feb-24 22:32:34 WIB, Lok:8.40 LS,121.74 BT (50 km TimurLaut ENDE-NTT), Kedlmn:13 Km ::BMKG-WSI\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 17:05:42 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 16:06:45 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -336,14 +279,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 17:05:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 16:06:45 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240210235959\',\'Info Gempa Mag:3.3 SR, 10-Feb-24 23:59:59 WIB, Lok:8.66 LS,119.31 BT (66 km Tenggara KOTA-BIMA-NTB), Kedlmn:134 Km ::BMKG-WSI\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240214230029\',\'Info Gempa Mag:2.8 SR, 14-Feb-24 23:00:29 WIB, Lok:9.12 LS,119.09 BT (31 km BaratLaut TAMBOLAKA-NTT), Kedlmn:76 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 19:49:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 17:59:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -354,14 +297,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 19:49:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 17:59:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240211023904\',\'Info Gempa Mag:1.9 SR, 11-Feb-24 02:39:04 WIB, Lok:8.64 LS,115.54 BT (19 km Tenggara KLUNGKUNG-BALI), Kedlmn:29 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240215005218\',\'Info Gempa Mag:2.3 SR, 15-Feb-24 00:52:18 WIB, Lok:8.54 LS,116.32 BT (19 km TimurLaut LOMBOKTENGAH-NTB), Kedlmn:66 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 20:12:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 18:11:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -372,14 +315,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 20:12:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 18:11:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240211030523\',\'Info Gempa Mag:2.2 SR, 11-Feb-24 03:05:23 WIB, Lok:8.87 LS,118.52 BT (37 km Tenggara DOMPU-NTB), Kedlmn:91 Km ::BMKG-KHK\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240215010335\',\'Info Gempa Mag:2.1 SR, 15-Feb-24 01:03:35 WIB, Lok:7.78 LS,118.55 BT (76 km BaratLaut BIMA-NTB), Kedlmn:64 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 20:37:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 18:36:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -390,14 +333,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 20:37:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 18:36:43 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240211032934\',\'Info Gempa Mag:2.1 SR, 11-Feb-24 03:29:34 WIB, Lok:8.44 LS,118.21 BT (30 km BaratLaut DOMPU-NTB), Kedlmn:111 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240215012733\',\'Info Gempa Mag:2.5 SR, 15-Feb-24 01:27:33 WIB, Lok:9.60 LS,119.18 BT (21 km Tenggara KODI-SUMBABARATDAYA-NTT), Kedlmn:36 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 22:00:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 19:04:42 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -408,14 +351,14 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 22:00:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 19:04:42 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240211045439\',\'Info Gempa Mag:3.7 SR, 11-Feb-24 04:54:39 WIB, Lok:8.23 LS,117.93 BT (63 km TimurLaut SUMBAWA-NTB), Kedlmn:16 Km ::BMKG-PGR III\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240215015714\',\'Info Gempa Mag:2.1 SR, 15-Feb-24 01:57:14 WIB, Lok:8.98 LS,120.39 BT (35 km BaratDaya BORONG-NTT), Kedlmn:10 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-ERROR - 2024-02-10 22:25:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+ERROR - 2024-02-14 19:05:42 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
 #1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
@@ -426,9 +369,81 @@ Stack trace:
 #6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2024-02-10 22:25:43 --> Unknown column 'id_shakemap' in 'field list'
+CRITICAL - 2024-02-14 19:05:42 --> Unknown column 'id_shakemap' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240211051939\',\'Info Gempa Mag:2.8 SR, 11-Feb-24 05:19:39 WIB, Lok:8.56 LS,116.85 BT (14 km BaratDaya PULAUPANJANG-NTB), Kedlmn:10 Km ::BMKG-KHK\',\'\')')
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240215015738\',\'Info Gempa Mag:2.0 SR, 15-Feb-24 01:57:38 WIB, Lok:8.70 LS,119.35 BT (64 km BaratDaya LABUANBAJO-NTT), Kedlmn:62 Km ::BMKG-PGR III\',\'\')')
+ 2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-14 19:37:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
+#1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
+#2 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO gem...')
+#3 C:\laragon\www\geofisikaDNP\profileWeb\app\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gem...')
+#4 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(939): App\Controllers\Web->simpan2()
+#5 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+#6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-14 19:37:43 --> Unknown column 'id_shakemap' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240215022911\',\'Info Gempa Mag:2.3 SR, 15-Feb-24 02:29:11 WIB, Lok:8.00 LS,117.83 BT (70 km TimurLaut SUMBAWA-NTB), Kedlmn:13 Km ::BMKG-KHK\',\'\')')
+ 2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-14 20:25:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
+#1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
+#2 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO gem...')
+#3 C:\laragon\www\geofisikaDNP\profileWeb\app\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gem...')
+#4 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(939): App\Controllers\Web->simpan2()
+#5 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+#6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-14 20:25:43 --> Unknown column 'id_shakemap' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240215031830\',\'Info Gempa Mag:2.6 SR, 15-Feb-24 03:18:30 WIB, Lok:8.27 LS,118.51 BT (29 km TimurLaut DOMPU-NTB), Kedlmn:16 Km ::BMKG-PGR III\',\'\')')
+ 2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-14 20:30:43 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
+#1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
+#2 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO gem...')
+#3 C:\laragon\www\geofisikaDNP\profileWeb\app\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gem...')
+#4 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(939): App\Controllers\Web->simpan2()
+#5 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+#6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-14 20:30:43 --> Unknown column 'id_shakemap' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240215032451\',\'Info Gempa Mag:3.1 SR, 15-Feb-24 03:24:51 WIB, Lok:7.79 LS,118.99 BT (78 km TimurLaut BIMA-NTB), Kedlmn:29 Km ::BMKG-PGR III\',\'\')')
+ 2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-14 21:19:42 --> mysqli_sql_exception: Unknown column 'id_shakemap' in 'field list' in C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO gem...', 0)
+#1 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO gem...')
+#2 C:\laragon\www\geofisikaDNP\profileWeb\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO gem...')
+#3 C:\laragon\www\geofisikaDNP\profileWeb\app\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gem...')
+#4 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(939): App\Controllers\Web->simpan2()
+#5 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
+#6 C:\laragon\www\geofisikaDNP\profileWeb\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\geofisikaDNP\profileWeb\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-14 21:19:42 --> Unknown column 'id_shakemap' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\Web.php(152): CodeIgniter\Database\BaseConnection->query('INSERT INTO gempapgr3 (id,infogempa,id_shakemap) VALUES (\'20240215041242\',\'Info Gempa Mag:2.4 SR, 15-Feb-24 04:12:42 WIB, Lok:8.14 LS,117.77 BT (54 km TimurLaut SUMBAWA-NTB), Kedlmn:15 Km ::BMKG-PGR III\',\'\')')
  2 SYSTEMPATH\CodeIgniter.php(939): App\Controllers\Web->simpan2()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)

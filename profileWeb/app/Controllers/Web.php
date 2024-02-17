@@ -57,6 +57,11 @@ class Web extends BaseController
         return view('informasiGempaBumi/gempaBumiTerkini.php');
     }
 
+    //INFO GEMPA DIRASAKAN
+    public function infogempadirasakan(){
+        return view('informasiGempaBumi/gempaBumiDirasakan.php');
+    }
+
     //MENERIMA DATA GEMPA
     public function simpan(){
         $request = \Config\Services::request();
