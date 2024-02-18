@@ -1,7 +1,7 @@
 <?= $this->extend('Layout/template');?>
 <?= $this->section('content') ?>
 <div class="container">
-    <h3>GEMPA BUMI TERKINI WILAYAH BALI (20 DATA TERAKHIR)</h3>
+    <h3>GEMPA BUMI TERKINI WILAYAH BALI</h3>
     <div id="map" class="map" style="width: 100%; height: 500px;"></div>
                
     <div class="table-responsive">
@@ -110,7 +110,7 @@ foreach ($results as $row):
     fillColor: '<?=$warna?>',
     fillOpacity: 1,
     radius: <?=$radius?>,
-    }).addTo(dibawah5);
+    }).bindPopup("<?=$row['infogempa']?>").addTo(dibawah5);
     </script>
     <?php else:?>
         <script>
