@@ -1,4 +1,4 @@
-<?= $this->extend('Layout/template');?>
+<?= $this->extend('Layout/template_baru');?>
 <?= $this->section('content') ?>
 <div class="container">
     <h3>GEMPA BUMI TERKINI WILAYAH BALI</h3>
