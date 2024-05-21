@@ -64,27 +64,26 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="<?php echo base_url('gambar/DSC_1.JPG') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('gambar/kegiatan/16052024.jpeg') ?>" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                    <div class="text-center"><a href="<?php echo base_url('kegiatan/17122023') ?>" class="btn btn-success">Selengkapnya</a></div>
+                    <h5>Kunjungan TK Dharma Kumara</h5>
+                    <div class="text-center"><a href="<?php echo base_url('kegiatan/16052024') ?>" class="btn btn-success">Selengkapnya</a></div>
                 </div>
                 </div>
                 <div class="carousel-item">
-                <img src="<?php echo base_url('gambar/DSC_1.JPG') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('gambar/kegiatan/25042024.jpeg') ?>" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                    <div class="text-center"><a href="<?php echo base_url('kegiatan/18122023') ?>" class="btn btn-success">Selengkapnya</a></div>
+                    <h5>Kunjungan RA An Nur</h5>
+                    <!-- <p>Some representative placeholder content for the second slide.</p> -->
+                    <div class="text-center"><a href="<?php echo base_url('kegiatan/25042024') ?>" class="btn btn-success">Selengkapnya</a></div>
                 </div>
                 </div>
                 <div class="carousel-item">
-                <img src="<?php echo base_url('gambar/DSC_1.JPG') ?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('gambar/kegiatan/17052024.jpeg') ?>" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                    <div class="text-center"><a href="<?php echo base_url('kegiatan/19122023') ?>" class="btn btn-success">Selengkapnya</a></div>
+                    <h5>Kunjungan Perwakilan World Bank</h5>
+                    <!-- <p>Some representative placeholder content for the third slide.</p> -->
+                    <div class="text-center"><a href="<?php echo base_url('kegiatan/17052024') ?>" class="btn btn-success">Selengkapnya</a></div>
                 </div>
                 </div>
             </div>

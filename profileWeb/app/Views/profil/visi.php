@@ -1,7 +1,7 @@
 <?= $this->extend('Layout/template');?>
 <?= $this->section('content') ?>
 <div class="container">
-    <h1>Visi dan Misi</h1>
+    <!-- <h1>Visi dan Misi</h1> -->
     <h2>Visi</h2>
     <p>Mewujudkan BMKG yang handal, tanggap dan mampu dalam rangka mendukung keselamatan masyarakat 
         serta keberhasilan pembangunan nasional, dan berperan aktif di tingkat Internasional.

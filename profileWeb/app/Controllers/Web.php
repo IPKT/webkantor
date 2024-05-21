@@ -10,6 +10,10 @@ class Web extends BaseController
     //     return view('home');
     // }
 
+    public function beranda(){
+        return view('profil/beranda.php');
+    }
+
     public function sejarah()
     {
         return view('profil/sejarah');
@@ -31,10 +35,7 @@ class Web extends BaseController
     public function tugas(){
         return view('profil/tugas.php');
     }
-    public function beranda(){
-        return view('profil/beranda.php');
-    }
-
+ 
     public function coba(){
         return view('profil/beranda_coba.php');
     }
