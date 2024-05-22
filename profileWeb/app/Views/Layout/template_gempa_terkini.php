@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link href="<?=base_url('bootstrap/')?>css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Font Icon CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?= base_url('style.css') ?>"/>
 
@@ -59,20 +60,20 @@ p {
                     $srcShakemap="";
                     $shakemap = "";
                     $db = \Config\Database::connect();
-                    $query = $db->query('SELECT id FROM gempabalidirasakan ORDER BY id DESC LIMIT 1');
+                    $query = $db->query('SELECT id_shakemap FROM gempabali ORDER BY id DESC LIMIT 1');
                     $results   = $query->getRow();
-                    if($results->id ==NULL or $results->id == "" ){
+                    if($results->id_shakemap ==NULL or $results->id_shakemap == "" ){
                         $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
                         $shakemap = $data->gempa->Shakemap;
                         $srcShakemap="https://data.bmkg.go.id/DataMKG/TEWS/".$shakemap;
                     } else{
-                        $shakemap = $results->id;
-                        $srcShakemap="https://data.bmkg.go.id/DataMKG/TEWS/".$shakemap.".mmi.jpg";
+                        $shakemap = $results->id_shakemap;
+                        $srcShakemap = "https://pgt.bmkg.go.id/assets/pgr3_peta/".$shakemap.".png";
                     }
                     
                     ?>
                 <div class="card">
-                    <div class="card-header" style="background-color:#343f52; color: white;"><h5>ShakeMap Gempa Dirasakan</h5></div>
+                    <div class="card-header" style="background-color:#343f52; color: white;"><h5>Peta Gempa Terkini</h5></div>
                     <div class="card-body">
                              <div class="col-lg-12 gempa-map"><img src="<?=$srcShakemap?>" width="100%" alt="informasi gempa bumi region 3"></div>
                     </div>      
@@ -94,6 +95,7 @@ p {
         </div>
     </div>
 </div>
+
 
         <div class="container-fluid">
             <div class="row" id="footer-info">
@@ -141,8 +143,9 @@ p {
     var map = L.map('map').setView([51.505, -0.09], 13);
     </script>
     <!-- Jquery dan Bootsrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <script src="<?=base_url('bootstrap/')?>js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
         function display_jam(){
             var refresh=1000; // Refresh rate in milli seconds

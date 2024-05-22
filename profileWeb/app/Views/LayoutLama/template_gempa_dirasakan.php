@@ -95,6 +95,12 @@ p {
     </div>
 </div>
 
+
+
+
+
+        <p><?= $this->renderSection('content') ?></p>
+
         <div class="container-fluid">
             <div class="row" id="footer-info">
                 <div class="col">
